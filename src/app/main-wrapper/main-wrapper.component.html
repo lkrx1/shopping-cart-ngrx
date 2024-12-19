@@ -1,5 +1,7 @@
 <div>
-  <a href="panier">Panier</a> <br />
-  <a href="liste-produits">Liste des produits</a>
+  <ul>
+    <li><a [routerLink]="['/panier']">Panier</a></li>
+    <li><a [routerLink]="['/liste-produits']">Liste des produits</a></li>
+  </ul>
 </div>
 <router-outlet></router-outlet>
