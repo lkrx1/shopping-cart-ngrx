@@ -1,0 +1,13 @@
+<div>
+  <h2>Panier d'Achat</h2>
+  <ul>
+    @for (item of (this.items$ | async); track $index) {
+    <li>
+      {{ item.name }} - {{ item.price }} x {{ item.quantity }}
+      <button (click)="removeItem(item.id)">Retirer</button>
+    </li>
+    }
+  </ul>
+  <div>Total: {{ total$ | async }}</div>
+  <button (click)="clearCart()">Vider le Panier</button>
+</div>

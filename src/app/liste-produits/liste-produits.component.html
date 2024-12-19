@@ -1,0 +1,11 @@
+<div>
+  <h2>Liste des Produits</h2>
+  <ul>
+    @for (product of products; track $index) {
+    <li>
+      {{ product.name }} - {{ product.price }}
+      <button (click)="addToCart(product)">Ajouter au Panier</button>
+    </li>
+    }
+  </ul>
+</div>
